@@ -9,7 +9,7 @@ export class NewsList extends Component {
           className="card my-3  "
           style={{
             textAlign: "left",
-            width: "20rem",
+            // width: "20rem",
             height: "26rem",
             backgroundColor: "rgb(195 195 195 / 30%)",
           }}

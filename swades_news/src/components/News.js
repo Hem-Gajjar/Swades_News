@@ -7,10 +7,12 @@ export class News extends Component {
   static defaultProps = {
     country: "in",
     pageSize: 8,
+    category: "general",
   };
   static propTypes = {
     country: PropTypes.string,
     pageSize: PropTypes.number,
+    category: PropTypes.string,
   };
   constructor() {
     super();
@@ -21,7 +23,7 @@ export class News extends Component {
     };
   }
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=4d1fbcab57f240939c5cd7b31b5278e3&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=4d1fbcab57f240939c5cd7b31b5278e3&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -33,7 +35,11 @@ export class News extends Component {
     });
   }
   previousBtnClick = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=4d1fbcab57f240939c5cd7b31b5278e3&page=${
+    let url = `https://newsapi.org/v2/top-headlines?country=${
+      this.props.country
+    }&category=${
+      this.props.category
+    }&apiKey=4d1fbcab57f240939c5cd7b31b5278e3&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -54,7 +60,11 @@ export class News extends Component {
       )
     ) {
       console.log(this.state.totalResults);
-      let url = `https://newsapi.org/v2/top-headlines?country=in&apiKey=4d1fbcab57f240939c5cd7b31b5278e3&page=${
+      let url = `https://newsapi.org/v2/top-headlines?country=${
+        this.props.country
+      }&category=${
+        this.props.category
+      }&apiKey=4d1fbcab57f240939c5cd7b31b5278e3&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
       this.setState({ loading: true });
