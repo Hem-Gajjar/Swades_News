@@ -9,12 +9,15 @@ export class NavBar extends Component {
           style={{
             fontFamily: "Kalam",
             fontWeight: "bold",
-            backgroundColor: "rgb(195 195 195)",
+            // backgroundColor: "rgb(195 195 195)",
+            backgroundColor: "rgb(224,131,8)",
+            background:
+              "linear-gradient(97deg, rgba(224,131,8,1) 0%, rgba(255,255,255,1) 51%, rgba(76,145,0,1) 100%)",
           }}
         >
           <div className="container-fluid">
             <a className="navbar-brand" href="/" style={{ fontSize: "25px" }}>
-              Swades
+              स्वदेश
             </a>
             <button
               className="navbar-toggler"
@@ -38,43 +41,43 @@ export class NavBar extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <a className="nav-link" href="/about">
                     About
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    business
+                  <a className="nav-link" href="/business">
+                    Business
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    entertainment
+                  <a className="nav-link" href="/entertainment">
+                    Entertainment
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    general
+                  <a className="nav-link" href="/general">
+                    General
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    health
+                  <a className="nav-link" href="/health">
+                    Health
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    science
+                  <a className="nav-link" href="/science">
+                    Science
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    sports
+                  <a className="nav-link" href="/sports">
+                    Sports
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    technology
+                  <a className="nav-link" href="/technology">
+                    Technology
                   </a>
                 </li>
               </ul>

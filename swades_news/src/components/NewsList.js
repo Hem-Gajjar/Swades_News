@@ -11,7 +11,9 @@ export class NewsList extends Component {
             textAlign: "left",
             // width: "20rem",
             height: "26rem",
-            backgroundColor: "rgb(195 195 195 / 30%)",
+            background: "rgb(0,133,187)",
+            background:
+              "linear-gradient(176deg, rgba(0,133,187,0.43469887955182074) 0%, rgba(253,253,253,0.23301820728291311) 100%)",
           }}
         >
           <img
