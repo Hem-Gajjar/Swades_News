@@ -16,8 +16,12 @@ export class NavBar extends Component {
           }}
         >
           <div className="container-fluid">
-            <a className="navbar-brand" href="/" style={{ fontSize: "25px" }}>
-              स्वदेश
+            <a
+              className="navbar-brand"
+              href="/general"
+              style={{ fontSize: "30px" }}
+            >
+              Swades
             </a>
             <button
               className="navbar-toggler"
@@ -36,7 +40,7 @@ export class NavBar extends Component {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link " aria-current="page" href="/">
+                  <a className="nav-link " aria-current="page" href="/general">
                     Home
                   </a>
                 </li>

@@ -6,9 +6,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <Router>
+        <NavBar />
         <Routes>
+          <Route
+            exact
+            key="home"
+            path=""
+            element={<NewsPage pageSize={8} country="in" category="general" />}
+          />
           <Route
             exact
             key="general"
@@ -28,12 +34,6 @@ function App() {
             element={
               <NewsPage pageSize={8} country="in" category="entertainment" />
             }
-          />
-          <Route
-            exact
-            key="general"
-            path="/general"
-            element={<NewsPage pageSize={8} country="in" category="general" />}
           />
           <Route
             exact
