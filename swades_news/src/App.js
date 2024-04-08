@@ -12,7 +12,7 @@ function App() {
           <Route
             exact
             key="general"
-            path="/"
+            path="/general"
             element={<NewsPage pageSize={8} country="in" category="general" />}
           />
           <Route

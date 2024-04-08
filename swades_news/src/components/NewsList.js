@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 export class NewsList extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl } = this.props;
+    let { title, description, imageUrl, newsUrl, author, date, source } =
+      this.props;
     return (
       <div className="">
         <div
@@ -10,7 +11,7 @@ export class NewsList extends Component {
           style={{
             textAlign: "left",
             // width: "20rem",
-            height: "26rem",
+            height: "30rem",
             background: "rgb(0,133,187)",
             background:
               "linear-gradient(176deg, rgba(0,133,187,0.43469887955182074) 0%, rgba(253,253,253,0.23301820728291311) 100%)",
@@ -28,7 +29,27 @@ export class NewsList extends Component {
           />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
+            <span
+              className="position-absolute top-0 start-50  translate-middle badge "
+              style={{
+                border: "2px solid black",
+                color: "black",
+                fontSize: "14px",
+                width: "80%",
+                backgroundColor: "rgb(224,131,8)",
+                background:
+                  "linear-gradient(97deg, rgba(224,131,8,1) 0%, rgba(255,255,255,1) 51%, rgba(76,145,0,1) 100%)",
+              }}
+            >
+              Source: {source ? source : "Unknown"}
+            </span>
             <p className="card-text">{description}...</p>
+            <p className="card-text">
+              <small className="text-body-secondary">
+                By {author ? author : "Unknown"} on{" "}
+                {new Date(date).toGMTString()}
+              </small>
+            </p>
             <a
               href={newsUrl}
               target="_blank"
