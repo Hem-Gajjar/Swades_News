@@ -43,7 +43,7 @@ export class NewsList extends Component {
             </span>
             <p className="card-text">{description}...</p>
             <p className="card-text">
-              <small className="text-body-secondary">
+              <small className="text-body-secondary ">
                 By {author ? author : "Unknown"} on{" "}
                 {new Date(date).toGMTString()}
               </small>
@@ -52,12 +52,9 @@ export class NewsList extends Component {
               href={newsUrl}
               target="_blank"
               rel="noreferrer"
-              className="btn  btn-dark"
+              className="btn  btn-dark position-absolute bottom-0 start-50  translate-middle"
               style={{
-                position: "absolute",
-                bottom: "0",
-                margin: "10px",
-                left: "100px",
+                marginTop: "10px",
               }}
             >
               Read More
